@@ -19,10 +19,11 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy S IV"
+#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy S4"
 
 #define BTA_DISABLE_DELAY 100 /* in milliseconds */
 #define SC_MODE_INCLUDED FALSE
+#define BLE_VND_INCLUDED FALSE
 #define SDP_DEBUG FALSE
 #define BTSNOOP_MEM FALSE
 #define BTM_WBS_INCLUDED TRUE /* Enable WBS */
