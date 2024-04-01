@@ -164,7 +164,7 @@ PRODUCT_PACKAGES += \
     copybit.msm8960 \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
-	libqdutils \
+    libqdutils \
     memtrack.msm8960
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
