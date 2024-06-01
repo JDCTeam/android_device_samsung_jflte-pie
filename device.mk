@@ -160,7 +160,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    copybit.msm8960 \
+    gralloc.msm8960 \
+    hwcomposer.msm8960 \
+    libqdutils \
+    memtrack.msm8960
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=1
@@ -228,10 +233,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/sec_touchkey.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchkey.kl
 
 # Keymaster
-# PRODUCT_PACKAGES += \
-#    android.hardware.keymaster@4.0-service-qti.rc \
-#    android.hardware.keymaster@4.1.vendor \
-#    android.hardware.keymaster@4.1-service
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service-qti.rc \
+    android.hardware.keymaster@4.1.vendor \
+    android.hardware.keymaster@4.1-service
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -242,8 +247,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/google.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/google.xml
     
 # Lights
-# PRODUCT_PACKAGES += \
-#    android.hardware.light-service.samsung
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung
 
 # Loki
 PRODUCT_PACKAGES += \
@@ -270,13 +275,27 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libstagefrighthw
+
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
 # Power
-# PRODUCT_PACKAGES += \
-#    android.hardware.power-service-qti \
-#    android.hardware.power.stats@1.0-service.mock
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    android.hardware.power.stats@1.0-service.mock
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
